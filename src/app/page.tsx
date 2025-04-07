@@ -12,98 +12,50 @@ export default async function Home() {
   // }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Top Banner */}
-      <div className="bg-[#f5f5f5] text-center py-2 text-xs tracking-wider">
-        FREE SHIPPING ON ALL WINE CLUB ORDERS
-      </div>
-
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <header className="px-8 py-6 flex justify-between items-center border-b border-gray-200">
-        <div className="text-4xl font-bold tracking-wider">
-          WATKINS
+      <header className="fixed w-full z-50 px-8 py-6 flex justify-between items-center">
+        <div className="text-xl font-light tracking-wider">
+          SURFSTYLE
         </div>
-        <nav className="flex space-x-8 text-sm">
-          <a href="#" className="hover:text-gray-600">SHOP</a>
-          <a href="#" className="hover:text-gray-600">WINE CLUB</a>
-          <a href="#" className="hover:text-gray-600">VISIT</a>
-          <a href="#" className="hover:text-gray-600">ABOUT</a>
-          <a href="#" className="hover:text-gray-600">ACCOUNT</a>
-          <a href="#" className="hover:text-gray-600">CART (0)</a>
+        <nav className="flex space-x-8 text-sm font-light">
+          <a href="#" className="hover:text-gray-300">SERVICES</a>
+          <a href="#" className="hover:text-gray-300">WORK</a>
+          <a href="#" className="hover:text-gray-300">ARTICLES</a>
+          <a href="#" className="hover:text-gray-300">ABOUT</a>
+          <a href="#" className="hover:text-gray-300">CONTACT</a>
         </nav>
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[85vh]">
+      <section className="relative h-screen w-full">
         <Image
-          src="/vineyard.jpg"
-          alt="Vineyard"
+          src="/surf.jpg"
+          alt="Surfer riding a wave"
           fill
-          className="object-cover"
+          className="object-cover grayscale"
           priority
         />
-        <div className="absolute bottom-0 left-0 p-16 text-white">
-          <h2 className="text-5xl font-light mb-2">SELECT AND ENJOY,</h2>
-          <h3 className="text-5xl font-light mb-8">JOIN THE WINE CLUB.</h3>
-          <button className="bg-white text-black px-12 py-3 text-sm hover:bg-gray-100 transition-colors">
-            JOIN
-          </button>
+        <div className="absolute inset-0 bg-black/40" /> {/* Overlay légèrement plus sombre */}
+        <div className="absolute bottom-32 left-8 z-10">
+          <h1 className="text-6xl font-light mb-4 tracking-tight max-w-2xl">
+            RIDING THE DIGITAL WAVE
+          </h1>
+          <p className="text-sm font-light text-gray-300">
+            Recent work: Surf Magazine, Ocean Photography, Wave Digital Campaign
+          </p>
         </div>
       </section>
 
-      {/* Title Section */}
-      <section className="py-24 px-4">
-        <h2 className="text-3xl md:text-4xl text-center max-w-4xl mx-auto font-light leading-relaxed">
-          NEW WAVE OF SERIOUS WINEMAKERS FROM ADELAIDE HILLS AND LANGHORNE CREEK
-        </h2>
-      </section>
-
-      {/* Wine Grid */}
-      <section className="px-8 pb-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Wine 1 */}
-          <div>
-            <div className="aspect-[4/5] relative mb-6">
-              <Image
-                src="/wine1.jpg"
-                alt="2023 Chardonnay"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <h3 className="text-xl mb-2">2023 Chardonnay</h3>
-            <p className="text-gray-600">$35.00</p>
-          </div>
-
-          {/* Wine 2 */}
-          <div>
-            <div className="aspect-[4/5] relative mb-6">
-              <Image
-                src="/wine2.jpg"
-                alt="2023 Pinot Noir"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <h3 className="text-xl mb-2">2023 Pinot Noir</h3>
-            <p className="text-gray-600">$42.00</p>
-          </div>
-
-          {/* Wine 3 */}
-          <div>
-            <div className="aspect-[4/5] relative mb-6">
-              <Image
-                src="/wine3.jpg"
-                alt="2023 Cabernet"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <h3 className="text-xl mb-2">2023 Cabernet</h3>
-            <p className="text-gray-600">$38.00</p>
-          </div>
+      {/* Footer */}
+      <footer className="fixed bottom-0 w-full px-8 py-4 text-xs font-light text-gray-400">
+        <div className="flex justify-end space-x-4">
+          <span>© 2024 SURFSTYLE</span>
+          <a href="#" className="hover:text-white">Articles</a>
+          <a href="#" className="hover:text-white">Downloads</a>
+          <a href="#" className="hover:text-white">Privacy Statement</a>
         </div>
-      </section>
+      </footer>
     </div>
   )
 }
